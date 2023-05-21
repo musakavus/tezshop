@@ -93,7 +93,8 @@
                     <!-- Search -->
                     <div class="col-sm-4 header_search">
                         <div id="sosearchpro" class="search-pro">
-                            <form method="GET" action="https://demo.smartaddons.com/templates/html/timurshop/index.html">
+                            <form method="GET"
+                                  action="https://demo.smartaddons.com/templates/html/timurshop/index.html">
                                 <div id="search0" class="search input-group">
                                     <div class="select_category filter_type  icon-select">
                                         <select class="no-border" name="category_id">
@@ -293,7 +294,7 @@
                                                             <a href="#" class="clearfix">
                                                                 <strong><img
 
-                                                                        alt="">Kategoriler</strong>
+                                                                        alt="">Kategorilerrr</strong>
                                                                 <span class="label"></span>
                                                                 <b class="caret"></b>
                                                             </a>
@@ -302,143 +303,53 @@
                                                                     <div class="row">
                                                                         <div class="col-sm-12">
                                                                             <div class="row">
-                                                                                <div class="col-md-3 img img1">
-                                                                                    <a href="#"><img
-                                                                                            class="lazyload img-responsive"
-                                                                                            data-sizes="auto"
-                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                                                            data-src="{% static 'image/demo/cms/img1.jpg' %}"
-                                                                                            alt="banner1"></a>
-                                                                                </div>
-                                                                                <div class="col-md-3 img img2">
-                                                                                    <a href="#"><img
-                                                                                            class="lazyload img-responsive"
-                                                                                            data-sizes="auto"
-                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                                                            data-src="{% static 'image/demo/cms/img2.jpg' %}"
-                                                                                            alt="banner2"></a>
-                                                                                </div>
-                                                                                <div class="col-md-3 img img3">
-                                                                                    <a href="#"><img
-                                                                                            class="lazyload img-responsive"
-                                                                                            data-sizes="auto"
-                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                                                            data-src="{% static 'image/demo/cms/img3.jpg' %}"
-                                                                                            alt="banner3"></a>
-                                                                                </div>
-                                                                                <div class="col-md-3 img img4">
-                                                                                    <a href="#"><img
-                                                                                            class="lazyload img-responsive"
-                                                                                            data-sizes="auto"
-                                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                                                            data-src="{% static 'image/demo/cms/img4.jpg' %}"
-                                                                                            alt="banner4"></a>
-                                                                                </div>
+
+                                                                                {% for category in categories|slice:":4" %}
+                                                                                    <div class="col-md-3 img img1">
+                                                                                        <a href="#"><img
+                                                                                                class="lazyload img-responsive"
+                                                                                                data-sizes="auto"
+                                                                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                                                                data-src="{{ category.image.url }}"
+                                                                                                alt="banner1"></a>
+                                                                                    </div>
+                                                                                {% endfor %}
+
+
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="row">
-                                                                        <div class="col-md-3">
-                                                                            <a href="#"
-                                                                               class="title-submenu">Automotive</a>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 hover-menu">
-                                                                                    <div class="menu">
-                                                                                        <ul>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Car
-                                                                                                Alarms and Security</a>
-                                                                                            </li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Car
-                                                                                                Audio &amp; Speakers</a>
-                                                                                            </li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Gadgets
-                                                                                                &amp; Auto Parts</a>
-                                                                                            </li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">More
-                                                                                                Car Accessories</a></li>
-                                                                                        </ul>
+                                                                        {% for category in categories|slice:":4" %}
+                                                                            <div class="col-md-3">
+                                                                                <a href="#"
+                                                                                   class="title-submenu">{{ category.name }}</a>
+                                                                                {% if category.sub_categories.exists %}
+
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 hover-menu">
+                                                                                            <div class="menu">
+
+                                                                                                    <ul>
+                                                                                                    {% for subcategory in category.sub_categories.all|slice:":4" %}
+                                                                                                        <li><a href="#"
+                                                                                                               class="main-menu">{{ subcategory.name }}</a>
+                                                                                                        </li>
+                                                                                                        {% endfor %}
+                                                                                                    </ul>
+
+                                                                                            </div>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
+
+
+
+                                                                                {% endif %}
+
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <a href="#" class="title-submenu">Electronics</a>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 hover-menu">
-                                                                                    <div class="menu">
-                                                                                        <ul>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Battereries
-                                                                                                &amp; Chargers</a></li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Headphones,
-                                                                                                Headsets</a></li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Home
-                                                                                                Audio</a></li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Mp3
-                                                                                                Players &amp;
-                                                                                                Aksesuarlar</a></li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <a href="#" class="title-submenu">Jewelry
-                                                                                &amp; Watches</a>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 hover-menu">
-                                                                                    <div class="menu">
-                                                                                        <ul>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Earings</a>
-                                                                                            </li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Wedding
-                                                                                                Rings</a></li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Men
-                                                                                                Watches</a></li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Women
-                                                                                                Watches</a></li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <a href="#" class="title-submenu">Bags,
-                                                                                Holiday Supplies</a>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 hover-menu">
-                                                                                    <div class="menu">
-                                                                                        <ul>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Gift
-                                                                                                &amp; Lifestyle
-                                                                                                Gadgets</a></li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Gift
-                                                                                                for Man</a></li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Gift
-                                                                                                for Woman</a></li>
-                                                                                            <li><a href="#"
-                                                                                                   class="main-menu">Lighter
-                                                                                                &amp; Cigar Supplies</a>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                        {% endfor %}
+
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -652,6 +563,7 @@
                                                                 </div>
                                                             </div>
                                                         </li>
+
 
                                                         <li class="with-sub-menu hover">
                                                             <p class="close-menu"></p>

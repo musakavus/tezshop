@@ -1,13 +1,16 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
+from main.models import Category
+
 
 def user_not_authenticated(user):
     return not user.is_authenticated
 
 
 def home(request):
-    return render(request, 'index.html')
+    categories = Category.objects.filter(parent_category=None)  # Ana kategorileri alın
+    return render(request, 'index.html', {'categories': categories})
 
 
 def hakkimizda(request):

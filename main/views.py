@@ -1,7 +1,10 @@
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.contrib.auth.hashers import make_password
+from django.shortcuts import render, redirect
 
-from main.models import Category
+from main.forms import RegistrationForm, LoginForm
+from main.models import Category, Registration
 
 
 def user_not_authenticated(user):
@@ -18,7 +21,20 @@ def hakkimizda(request):
 
 
 def kayit(request):
-    return render(request, 'register.html')
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            registration = form.save(commit=False)
+            registration.password = make_password(registration.password)  # Şifreyi hashle
+            registration.save()
+            return redirect('home')
+    else:
+        form = RegistrationForm()
+
+    context = {
+        'form': form
+    }
+    return render(request, 'register.html', context)
 
 
 def siparis_tamamla(request):
@@ -26,7 +42,25 @@ def siparis_tamamla(request):
 
 
 def giris(request):
-    return render(request, 'login.html')
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=email, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')  # Giriş başarılıysa yönlendirilecek sayfa adını belirtin
+            else:
+                # Giriş başarısız olduğunda yapılacak işlemler
+                form.add_error(None, "Geçersiz kullanıcı adı veya şifre.")
+    else:
+        form = LoginForm()
+
+    context = {
+        'form': form
+    }
+    return render(request, 'login.html', context)
 
 
 def kategoriler(request):

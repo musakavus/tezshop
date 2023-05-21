@@ -66,11 +66,12 @@
 
         <div class="row">
             <div id="content" class="col-sm-12">
-                <h2 class="title">Register Account</h2>
+                <h2 class="title">Kayıt Formu</h2>
                 <p>Zaten bir hesabınız var mı, o zaman <a href="#">giriş yapın</a>.</p>
-                <form action="#" method="post" enctype="multipart/form-data"
+                <form action="{% url 'kayit' %}" method="post" enctype="multipart/form-data"
                       class="form-horizontal account-register clearfix">
                     <fieldset id="account">
+                        {% csrf_token %}
                         <legend>Kişisel Bilgiler</legend>
                         <div class="form-group required" style="display: none;">
                             <label class="col-sm-2 control-label">Customer Group</label>
@@ -86,14 +87,14 @@
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-firstname">İsim</label>
                             <div class="col-sm-10">
-                                <input type="text" name="firstname" value="" placeholder="İsminiz"
+                                <input type="text" name="first_name" value="" placeholder="İsminiz"
                                        id="input-firstname" class="form-control">
                             </div>
                         </div>
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-lastname">Soyisim</label>
                             <div class="col-sm-10">
-                                <input type="text" name="lastname" value="" placeholder="Soyisminiz" id="input-lastname"
+                                <input type="text" name="last_name" value="" placeholder="Soyisminiz" id="input-lastname"
                                        class="form-control">
                             </div>
                         </div>
@@ -107,7 +108,7 @@
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-telephone">Telefon</label>
                             <div class="col-sm-10">
-                                <input type="tel" name="telephone" value="" placeholder="Telefon" id="input-telephone"
+                                <input type="tel" name="phone" value="" placeholder="Telefon" id="input-telephone"
                                        class="form-control">
                             </div>
                         </div>
@@ -125,14 +126,14 @@
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-address-1">Adres 1</label>
                             <div class="col-sm-10">
-                                <input type="text" name="address_1" value="" placeholder="Adres 1"
+                                <input type="text" name="address1" value="" placeholder="Adres 1"
                                        id="input-address-1" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="input-address-2">Adres 2</label>
                             <div class="col-sm-10">
-                                <input type="text" name="address_2" value="" placeholder="Adres 2"
+                                <input type="text" name="address2" value="" placeholder="Adres 2"
                                        id="input-address-2" class="form-control">
                             </div>
                         </div>
@@ -146,14 +147,14 @@
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-postcode">Posta Kodu</label>
                             <div class="col-sm-10">
-                                <input type="text" name="postcode" value="" placeholder="Posta Kodu" id="input-postcode"
+                                <input type="text" name="postal_code" value="" placeholder="Posta Kodu" id="input-postcode"
                                        class="form-control">
                             </div>
                         </div>
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-country">Ülke</label>
                             <div class="col-sm-10">
-                                <select name="country_id" id="input-country" class="form-control">
+                                <select name="country" id="input-country" class="form-control">
                                     <option value=""> --- Lütfen seçiniz ---</option>
                                     <option value="244">Türkiye</option>
                                     <option value="1">Almanya</option>
@@ -168,7 +169,7 @@
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-zone">Region / State</label>
                             <div class="col-sm-10">
-                                <select name="zone_id" id="input-zone" class="form-control">
+                                <select name="postal_code" id="input-zone" class="form-control">
                                     <option value=""> --- Lütfen seçin ---</option>
                                     <option value="3513">Madrid</option>
                                     <option value="3514">İstanbul</option>
@@ -191,31 +192,27 @@
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-confirm">Şifreni Tekrarla</label>
                             <div class="col-sm-10">
-                                <input type="password" name="confirm" value="" placeholder="Şifreyi Doğrula"
+                                <input type="password" name="password_confirmation" value="" placeholder="Şifreyi Doğrula"
                                        id="input-confirm" class="form-control">
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Abonelik</legend>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Abone ol</label>
-                            <div class="col-sm-10">
-                                <label class="radio-inline">
-                                    <input type="radio" name="newsletter" value="1"> Evet
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="newsletter" value="0" checked="checked"> Hayır
-                                </label>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <div class="buttons">
-                        <div class="pull-right">Üyelik sözleşmesini <a href="#" class="agree"><b>kabul ediyorum</b></a>
-                            <input class="box-checkbox" type="checkbox" name="agree" value="1"> &nbsp;
-                            <input type="submit" value="Continue" class="btn btn-primary">
-                        </div>
-                    </div>
+{#                    <fieldset>#}
+{#                        <legend>Abonelik</legend>#}
+{#                        <div class="form-group">#}
+{#                            <label class="col-sm-2 control-label">Abone ol</label>#}
+{#                            <div class="col-sm-10">#}
+{#                                <label class="radio-inline">#}
+{#                                    <input type="radio" name="subscription" value="1"> Evet#}
+{#                                </label>#}
+{#                                <label class="radio-inline">#}
+{#                                    <input type="radio" name="newsletter" value="0" checked="checked"> Hayır#}
+{#                                </label>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </fieldset>#}
+
+                    <input type="submit" value="Continue" class="btn btn-primary">
                 </form>
             </div>
         </div>
@@ -250,9 +247,9 @@
 ============================================ -->
 
 
-<script type="text/javascript" src="js/themejs/so_megamenu.js' %}"></script>
-<script type="text/javascript" src="js/themejs/addtocart.js' %}"></script>
-<script type="text/javascript" src="js/themejs/application.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/so_megamenu.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/addtocart.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/application.js' %}"></script>
 
 </body>
 

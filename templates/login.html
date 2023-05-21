@@ -77,12 +77,13 @@
                                         hakkında güncel bilgilere sahip olabilir ve daha önce verdiğiniz siparişleri
                                         takip edebilirsiniz.</p>
                                 </div>
-                                <div class="bottom-form">
-                                    <a href="#" class="btn btn-default pull-right">Devam et</a>
-                                </div>
+{#                                <div class="bottom-form">#}
+{#                                    <a href="#" class="btn btn-default pull-right">Devam et</a>#}
+{#                                </div>#}
                             </div>
 
-                            <form action="#" method="post" enctype="multipart/form-data">
+                            <form action="{% url 'giris' %}" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
                                 <div class="col-sm-6 customer-login">
                                     <div class="well">
                                         <h2><i class="fa fa-file-text-o" aria-hidden="true"></i> Yeni Kullanıcı</h2>
@@ -98,10 +99,8 @@
                                                    class="form-control"/>
                                         </div>
                                     </div>
-                                    <div class="bottom-form">
-                                        <a href="#" class="forgot">Şifremi Unuttum</a>
-                                        <input type="submit" value="Giriş" class="btn btn-default pull-right"/>
-                                    </div>
+                                    <input type="submit" value="Giriş" class="btn btn-default pull-right"/>
+
                                 </div>
                             </form>
                         </div>
@@ -119,11 +118,7 @@
 
 
 <!-- Preloading Screen -->
-<div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-</div>
+
 <!-- End Preloading Screen -->
 <!-- Include Libs & Plugins
 	============================================ -->

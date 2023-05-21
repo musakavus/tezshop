@@ -1,0 +1,348 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<head>
+
+    <!-- Basic page needs
+	============================================ -->
+    <title>Musashop - Profil</title>
+    <meta charset="utf-8">
+    <meta name="keywords"
+          content="boostrap, responsive, html5, css3, jquery, theme, multicolor, parallax, retina, business"/>
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow"/>
+
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon
+    ============================================ -->
+
+    <link rel="shortcut icon" href="{% static 'ico/favicon.png' %}">
+
+    <!-- Google web fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:400,500,700,900' rel='stylesheet'
+          type='text/css'>
+
+    <!-- Libs CSS
+	============================================ -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/lib.css' %}" rel="stylesheet">
+    <link href="{% static 'js/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="{% static 'css/themecss/so_megamenu.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-categories.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-listing-tabs.css' %}" rel="stylesheet">
+
+    <link id="color_scheme" href="{% static 'css/theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body class="res layout-subpage">
+<div id="wrapper" class="wrapper-full ">
+    <!-- Header Container  -->
+    {% include 'partials/_header2.html' %}
+    <!-- //Header Container  -->
+    <!-- Main Container  -->
+    <div class="main-container container">
+        <ul class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i></a></li>
+            <li><a href="{% url 'home' %}">Anasayfa</a></li>
+            <li><a href="{% url 'profil' %}">Profilim</a></li>
+        </ul>
+
+        <div class="row">
+            <!--Middle Part Start-->
+            <div class="col-sm-9" id="content">
+                <h2 class="title">Hesabım</h2>
+                <p class="lead">Merhaba, <strong>Musa!</strong> - bilgilerini burdan güncelleyebilirsin.</p>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <fieldset id="personal-details">
+                                <legend>Kişisel Bilgiler</legend>
+                                <div class="form-group required">
+                                    <label for="input-firstname" class="control-label">İsim</label>
+                                    <input type="text" class="form-control" id="input-firstname"
+                                           placeholder="İsim" value="" name="firstname">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-lastname" class="control-label">Soyisim</label>
+                                    <input type="text" class="form-control" id="input-lastname" placeholder="Soyisim"
+                                           value="" name="lastname">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-email" class="control-label">E-Mail</label>
+                                    <input type="email" class="form-control" id="input-email" placeholder="E-Mail"
+                                           value="" name="email">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-telephone" class="control-label">Telefon</label>
+                                    <input type="tel" class="form-control" id="input-telephone" placeholder="Telefon"
+                                           value="" name="telephone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-fax" class="control-label">Fax</label>
+                                    <input type="text" class="form-control" id="input-fax" placeholder="Fax" value=""
+                                           name="fax">
+                                </div>
+                            </fieldset>
+                            <br>
+                        </div>
+                        <div class="col-sm-6">
+                            <fieldset>
+                                <legend>Şifre değiştir</legend>
+                                <div class="form-group required">
+                                    <label for="input-password" class="control-label">Güncel Parola</label>
+                                    <input type="password" class="form-control" id="input-password"
+                                           placeholder="Güncel Para" value="" name="old-password">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-password" class="control-label">Yeni Parola</label>
+                                    <input type="password" class="form-control" id="input-password"
+                                           placeholder="Yeni Parola" value="" name="new-password">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-confirm" class="control-label">Parolanı Onayla</label>
+                                    <input type="password" class="form-control" id="input-confirm"
+                                           placeholder="Parolanı Onayla" value="" name="new-confirm">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Abonelik</legend>
+                                <div class="form-group">
+                                    <label class="col-md-2 col-sm-3 col-xs-3 control-label">Abonelik</label>
+                                    <div class="col-md-10 col-sm-9 col-xs-9">
+                                        <label class="radio-inline">
+                                            <input type="radio" value="1" name="newsletter"> Evet
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" checked="checked" value="0" name="newsletter"> Hayır
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <fieldset id="address">
+                                <legend>Alıcı Adres</legend>
+                                <div class="form-group">
+                                    <label for="input-company" class="control-label">Şirket</label>
+
+                                    <input type="text" class="form-control" id="input-company" placeholder="Şirket"
+                                           value="" name="company">
+
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-address-1" class="control-label">Adres 1</label>
+                                    <input type="text" class="form-control" id="input-address-1" placeholder="Adres 1"
+                                           value="" name="address_1">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-city" class="control-label">Şehir</label>
+                                    <input type="text" class="form-control" id="input-city" placeholder="Şehir" value=""
+                                           name="city">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-postcode" class="control-label">Posta Kodu</label>
+                                    <input type="text" class="form-control" id="input-postcode" placeholder="Posta Kodu"
+                                           value="" name="postcode">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-country" class="control-label">Ülke</label>
+                                    <select class="form-control" id="input-country" name="country_id">
+                                        <option value=""> --- Ülke seçin ---</option>
+                                        <option value="244">Türkiye</option>
+                                        <option value="1">Almanya</option>
+                                        <option value="2">İngiltere</option>
+                                        <option value="3">Rusya</option>
+                                        <option value="4">Mısır</option>
+                                        <option value="5">Yeni Gine</option>
+                                        <option value="6">Angola</option>
+                                        <option value="7">Amerika</option>
+                                        <option value="8">Meksika</option>
+                                        <option value="9">Barbados</option>
+                                        <option value="10">Arjantin</option>
+                                        <option value="11">Azerbaycan</option>
+                                        <option value="12">Bahreyn</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-zone" class="control-label">Bölge</label>
+                                    <select class="form-control" id="input-zone" name="zone_id">
+                                        <option value=""> --- Lütfen seçin ---</option>
+                                        <option value="3513">İstanbul</option>
+                                        <option value="3514">Londra</option>
+                                        <option value="3515">Paris</option>
+                                        <option value="3516">Madrid</option>
+                                        <option value="3517">Lefkoşa</option>
+                                        <option value="3518">Bükreş</option>
+                                        <option value="3519">Ankara</option>
+
+                                    </select>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6">
+                            <fieldset id="shipping-address">
+                                <legend>Fatura Adress</legend>
+                                <div class="form-group">
+                                    <label for="input-company" class="control-label">Şirket</label>
+                                    <input type="text" class="form-control" id="input-company" placeholder="Şirket"
+                                           value="" name="company">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-address-1" class="control-label">Adres 1</label>
+                                    <input type="text" class="form-control" id="input-address-1" placeholder="Adres 1"
+                                           value="" name="address_1">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-city" class="control-label">Şehir</label>
+                                    <input type="text" class="form-control" id="input-city" placeholder="Şehir" value=""
+                                           name="city">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-postcode" class="control-label">Posta Kodu</label>
+                                    <input type="text" class="form-control" id="input-postcode" placeholder="Posta Kodu"
+                                           value="" name="postcode">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-country" class="control-label">Ülke</label>
+                                    <select class="form-control" id="input-country" name="country_id">
+                                        <option value=""> --- Ülke seçiniz ---</option>
+                                        <option value="244">Türkiye</option>
+                                        <option value="1">İngiltere</option>
+                                        <option value="2">İspanya</option>
+                                        <option value="3">Fransa</option>
+                                        <option value="4">Amerika</option>
+                                        <option value="5">Mısır</option>
+                                        <option value="6">Nijerya</option>
+                                        <option value="7">Angola</option>
+                                        <option value="8">Kuzey Kıbrıs</option>
+                                        <option value="9">Barbados</option>
+                                        <option value="10">Arjantin</option>
+                                        <option value="11">Rusya</option>
+                                        <option value="12">Bahreyn</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-zone" class="control-label">Bölge</label>
+                                    <select class="form-control" id="input-zone" name="zone_id">
+                                        <option value=""> --- Bölge seçin ---</option>
+                                        <option value="3513">Ankara</option>
+                                        <option value="3514">İstanbul</option>
+                                        <option value="3515">Madrid</option>
+                                        <option value="3516">Bükreş</option>
+                                        <option value="3517">Lefkoşa</option>
+                                        <option value="3518">Londra</option>
+                                        <option value="3519">Paris</option>
+
+                                    </select>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+
+                    <div class="buttons clearfix">
+                        <div class="pull-right">
+                            <input type="submit" class="btn btn-md btn-primary" value="Değişiklikleri Onayla">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--Middle Part End-->
+            <!--Right Part Start -->
+            <aside class="col-sm-3 hidden-xs" id="column-right">
+                <h2 class="subtitle">Hesap</h2>
+                <div class="list-group">
+                    <ul class="list-item">
+                        <li><a href="{% url 'home' %}">Giriş</a>
+                        </li>
+                        <li><a href="{% url 'kayit' %}">Kayıt</a>
+                        </li>
+                        <li><a href="#">Şifremi Unuttum</a>
+                        </li>
+                        <li><a href="{% url 'profil' %}">Hesabım</a>
+                        </li>
+                        <li><a href="{% url 'profil' %}">Adreslerim</a>
+                        </li>
+                        <li><a href="{% url 'istek_listesi' %}">İstek Listesi</a>
+                        </li>
+                        <li><a href="#">Alışveriş Geçmişi</a>
+                        </li>
+                        <li><a href="#">İndirmeler</a>
+                        </li>
+                        <li><a href="#">Ödül Puanları</a>
+                        </li>
+                        <li><a href="#">İadeler</a>
+                        </li>
+                        <li><a href="#">İşlemler</a>
+                        </li>
+                        <li><a href="#">Abonelik</a>
+                        </li>
+                        <li><a href="#">Para iadesi</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!--Right Part End -->
+        </div>
+    </div>
+    <!-- //Main Container -->
+    <!-- Footer Container -->
+    {% include 'partials/_footer.html' %}
+    <!-- //end Footer Container -->
+</div>
+
+
+<!-- Preloading Screen -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- End Preloading Screen -->
+
+<!-- Include Libs & Plugins
+	============================================ -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="js/themejs/libs.js"></script>
+<script type="text/javascript" src="js/unveil/jquery.unveil.js"></script>
+<script type="text/javascript" src="js/countdown/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
+<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+
+
+<!-- Theme files
+============================================ -->
+
+
+<script type="text/javascript" src="{% static 'js/themejs/so_megamenu.js"></script>
+<script type="text/javascript" src="{% static 'js/themejs/addtocart.js"></script>
+<script type="text/javascript" src="{% static 'js/themejs/application.js"></script>
+
+</body>
+
+</html>

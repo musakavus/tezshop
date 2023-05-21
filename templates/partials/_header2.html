@@ -1,0 +1,1080 @@
+{% load static %}
+<header id="header" class=" variantleft type_1">
+    <!-- Header Top -->
+    <div class="header-top compact-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="header-top-left  col-lg-4  hidden-sm col-md-5 hidden-xs">
+                    <ul class="list-inlines">
+                        <li class="hidden-xs">
+                            <div class="welcome-msg">
+                                <ul class="list-msg">
+                                    <li><label class="label-msg">Bu hafta</label> <a href="#">Sana özel bu
+                                        indirimleri sakın kaçırma</a></li>
+                                    <li><label class="label-msg">Yarın</label> <a href="#">Kazandıran saatler ile
+                                        en uygun fiyatı kap</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="header-top-right collapsed-block col-lg-8 col-sm-12 col-md-7 col-xs-12 ">
+                    <h5 class="tabBlockTitle visible-xs">More<a class="expander " href="#TabBlock-1"><i
+                            class="fa fa-angle-down"></i></a></h5>
+                    <div class="tabBlock" id="TabBlock-1">
+                        <ul class="top-link list-inline">
+                            <li class="account" id="my_account">
+                                <a href="#" title="My Account" class="btn btn-xs dropdown-toggle"
+                                   data-toggle="dropdown"> <span>Hesabım</span> <span
+                                        class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu ">
+                                    <li><a href="register.html"><i class="fa fa-user"></i> Register</a></li>
+                                    <li><a href="login.html"><i class="fa fa-pencil-square-o"></i> Login</a></li>
+                                </ul>
+                            </li>
+                            <li class="wishlist "><a href="wishlist.html" id="wishlist-total"
+                                                     class="top-link-wishlist"
+                                                     title="Wish List (2)"><span>Sepet (2)</span></a>
+                            </li>
+                            <li class="checkout hidden"><a href="checkout.html" class="top-link-checkout"
+                                                           title="Checkout"><span>Checkout</span></a></li>
+                            <li class="login hidden"><a href="cart.html"
+                                                        title="Shopping Cart"><span>Shopping Cart</span></a></li>
+
+                            <li class="form-group languages-block ">
+                                <form action="https://demo.smartaddons.com/templates/html/maxshop/index.html"
+                                      method="post" enctype="multipart/form-data" id="bt-language">
+                                    <a class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        <img src="{% static 'image/demo/flags/gb.png' %}" alt="English"
+                                             title="English">
+                                        <span class="">English</span>
+                                        <span class="fa fa-angle-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.html"><img class="image_flag"
+                                                                      src="{% static 'image/demo/flags/gb.png' %}"
+                                                                      alt="English"
+                                                                      title="English"/> English </a></li>
+                                        <li><a href="index.html"> <img class="image_flag"
+                                                                       src="{% static 'image/demo/flags/lb.png' %}"
+                                                                       alt="Arabic"
+                                                                       title="Arabic"/> Arabic </a></li>
+                                    </ul>
+                                </form>
+                            </li>
+                            <li class="form-group currency currencies-block">
+                                <form action="https://demo.smartaddons.com/templates/html/maxshop/index.html"
+                                      method="post" enctype="multipart/form-data" id="currency">
+                                    <a class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        <span class="icon icon-credit "></span> TL Türk Lirası <span
+                                            class="fa fa-angle-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu btn-xs">
+                                        <li><a href="#">(€)&nbsp;Euro</a></li>
+                                        <li><a href="#">(₺)&nbsp;Türk Lirası </a></li>
+                                        <li><a href="#">(₺)&nbsp;US Dollar </a></li>
+                                    </ul>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Header Top -->
+    <!-- Header center -->
+    <div class="header-center">
+        <div class="container">
+            <div class="row">
+                <!-- LOGO -->
+                <div class="navbar-logo col-md-3 col-sm-4 col-xs-10">
+                    <a href="index.html"><img src="{% static 'image/demo/logos/theme_logo.png' %}" title="Your Store"
+                                              alt="Your Store"/></a>
+                </div>
+                <div class="header-center-right col-md-9 col-sm-8 col-xs-2">
+                    <div class="responsive so-megamenu  megamenu-style-dev">
+                        <nav class="navbar-default">
+                            <div class=" container-megamenu  horizontal">
+                                <div class="navbar-header">
+                                    <button type="button" id="show-megamenu" data-toggle="collapse"
+                                            class="navbar-toggle">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="megamenu-wrapper ">
+                                    <span id="remove-megamenu" class="fa fa-times"></span>
+                                    <div class="megamenu-pattern">
+                                        <div class="container">
+                                            <ul class="megamenu " data-transition="slide" data-animationtime="250">
+                                                <li class="home hover">
+                                                    <a href="{% url 'home' %}">Anasayfa <b class="caret"></b></a>
+
+                                                </li>
+                                                <li class="with-sub-menu hover">
+                                                    <p class="close-menu"></p>
+                                                    <a href="#" class="clearfix">
+                                                        <strong>
+
+                                                            Özellikler
+                                                        </strong>
+
+                                                        <b class="caret"></b>
+                                                    </a>
+
+                                                </li>
+                                                <li class="with-sub-menu hover">
+                                                    <p class="close-menu"></p>
+                                                    <a href="{% url 'iletisim' %}" class="clearfix">
+                                                        <strong><img
+                                                                alt="">İletişim</strong>
+                                                        <b class="caret"></b>
+                                                    </a>
+
+                                                </li>
+                                                <li class="with-sub-menu hover">
+                                                    <p class="close-menu"></p>
+                                                    <a href="#" class="clearfix">
+                                                        <strong><img
+                                                                alt="">Kategoriler</strong>
+                                                        <span class="label"></span>
+                                                        <b class="caret"></b>
+                                                    </a>
+
+                                                </li>
+
+                                                <li class="with-sub-menu hover">
+                                                    <p class="close-menu"></p>
+                                                    <a href="#" class="clearfix">
+                                                        <strong>Aksesuarlar</strong>
+
+                                                        <b class="caret"></b>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <p class="close-menu"></p>
+                                                    <a href="{% url 'hakkimizda' %}" class="clearfix">
+                                                        <strong>Hakkımızda</strong>
+                                                        <span class="label"></span>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Header center -->
+    <!-- Header Bottom -->
+    <div class="header-bottom compact-hidden">
+        <div class="container">
+            <div class="header-bottom-inner">
+                <div class="row">
+                    <div class="header-bottom-left menu-vertical col-md-3 col-sm-2 col-xs-2">
+                        <div class="responsive so-megamenu megamenu-style-dev">
+                            <div class="so-vertical-menu no-gutter compact-hidden">
+                                <nav class="navbar-default">
+
+                                    <div class="container-megamenu vertical open">
+                                        <div id="menuHeading">
+                                            <div class="megamenuToogle-wrapper">
+                                                <div class="megamenuToogle-pattern">
+                                                    <div class="container">
+                                                        <div>
+                                                            <span></span>
+                                                            <span></span>
+                                                            <span></span>
+                                                        </div>
+                                                        Kategoriler
+                                                        <i class="fa pull-right arrow-circle fa-chevron-circle-up"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="navbar-header">
+                                            <button type="button" id="show-verticalmenu" data-toggle="collapse"
+                                                    class="navbar-toggle">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+                                        <div class="vertical-wrapper">
+                                            <span id="remove-verticalmenu" class="fa fa-times"></span>
+                                            <div class="megamenu-pattern">
+                                                <div class="container">
+                                                    <ul class="megamenu">
+                                                        <li class="item-vertical style1 with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <strong>
+                                                                    <span>Telefon &amp; Tablet</span>
+                                                                    <b class="fa fa-angle-right"></b>
+                                                                </strong>
+                                                            </a>
+                                                            <div class="sub-menu" data-subwidth="100">
+                                                                <div class="content">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-8">
+                                                                            <div class="categories ">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="#"
+                                                                                                       class="main-menu">Automotive</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Car
+                                                                                                                Alarms
+                                                                                                                and
+                                                                                                                Security</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Car
+                                                                                                                Audio
+                                                                                                                &amp;
+                                                                                                                Speakers</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Gadgets
+                                                                                                                &amp;
+                                                                                                                Auto
+                                                                                                                Parts</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">More
+                                                                                                                Car
+                                                                                                                Accessories</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="#"
+                                                                                                       class="main-menu">Computer</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Camping
+                                                                                                                &amp;
+                                                                                                                Hiking</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Cusen
+                                                                                                                mariot</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Denta
+                                                                                                                magela</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Engite
+                                                                                                                nanet</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="#"
+                                                                                                       class="main-menu">Electronics </a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Angene
+                                                                                                                mafin</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Egante
+                                                                                                                mangetes</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Gante
+                                                                                                                extensg</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Guntes
+                                                                                                                magesg</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="#"
+                                                                                                       class="main-menu">Mobile
+                                                                                                        &amp;
+                                                                                                        Tablet </a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Hanet
+                                                                                                                magente</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Knage
+                                                                                                                unget</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Latenge
+                                                                                                                mange</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Punge
+                                                                                                                nenune</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <div class="row img-banner">
+                                                                                <a href="#"><img
+                                                                                        src="{% static 'image/demo/cms/img-static-megamenu-h.png' %}"
+                                                                                        alt="banner"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <strong>
+                                                                    <span>Bilgisayar & Aksesuat</span>
+                                                                </strong>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <span class="label"></span>
+                                                                <strong>
+                                                                    <span>Spor &amp; Outdoors</span>
+                                                                    <b class="fa fa-angle-right"></b>
+                                                                </strong>
+                                                            </a>
+                                                            <div class="sub-menu" data-subwidth="60">
+                                                                <div class="content">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 static-menu">
+                                                                                    <div class="menu">
+                                                                                        <ul>
+                                                                                            <li>
+                                                                                                <a href="#"
+                                                                                                   onclick="window.location = '81.html';"
+                                                                                                   class="main-menu">Mobile
+                                                                                                    Accessories</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#"
+                                                                                                           onclick="window.location = '33_63.html';">Gadgets
+                                                                                                        &amp; Auto
+                                                                                                        Parts</a>
+                                                                                                    </li>
+                                                                                                    <li><a href="#"
+                                                                                                           onclick="window.location = '24_64.html';">Bath
+                                                                                                        &amp;
+                                                                                                        Body</a>
+                                                                                                    </li>
+                                                                                                    <li><a href="#"
+                                                                                                           onclick="window.location = '17.html';">Bags,
+                                                                                                        Holiday
+                                                                                                        Supplies</a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="#"
+                                                                                                   onclick="window.location = '18_46.html';"
+                                                                                                   class="main-menu">Battereries
+                                                                                                    &amp;
+                                                                                                    Chargers</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#"
+                                                                                                           onclick="window.location = '25_28.html';">Outdoor
+                                                                                                        &amp;
+                                                                                                        Traveling</a>
+                                                                                                    </li>
+                                                                                                    <li><a href="#"
+                                                                                                           onclick="window.location = '80.html';">Flashlights
+                                                                                                        &amp;
+                                                                                                        Lamps</a>
+                                                                                                    </li>
+                                                                                                    <li><a href="#"
+                                                                                                           onclick="window.location = '24_66.html';">Fragrances</a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="#"
+                                                                                                   onclick="window.location = '25_31.html';"
+                                                                                                   class="main-menu">Fishing</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#"
+                                                                                                           onclick="window.location = '57_73.html';">FPV
+                                                                                                        System &amp;
+                                                                                                        Parts</a>
+                                                                                                    </li>
+                                                                                                    <li><a href="#"
+                                                                                                           onclick="window.location = '18.html';">Electronics</a>
+                                                                                                    </li>
+                                                                                                    <li><a href="#"
+                                                                                                           onclick="window.location = '20_76.html';">Earings</a>
+                                                                                                    </li>
+                                                                                                    <li><a href="#"
+                                                                                                           onclick="window.location = '33_60.html';">More
+                                                                                                        Car
+                                                                                                        Accessories</a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="row banner">
+                                                                                <a href="#">
+                                                                                    <img src="{% static 'image/demo/cms/menu_bg2.jpg' %}"
+                                                                                         alt="banner1">
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="item-vertical with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <strong>
+                                                                    <span>Sağlık & Güzellik</span>
+                                                                    <b class="fa fa-angle-right"></b>
+                                                                </strong>
+                                                            </a>
+                                                            <div class="sub-menu" data-subwidth="100">
+                                                                <div class="content">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4 static-menu">
+                                                                                    <div class="menu">
+                                                                                        <ul>
+                                                                                            <li>
+                                                                                                <a href="#"
+                                                                                                   class="main-menu">Car
+                                                                                                    Alarms and
+                                                                                                    Security</a>
+                                                                                                <ul>
+                                                                                                    <li><a href="#">Car
+                                                                                                        Audio &amp;
+                                                                                                        Speakers</a>
+                                                                                                    </li>
+                                                                                                    <li><a href="#">Gadgets
+                                                                                                        &amp; Auto
+                                                                                                        Parts</a>
+                                                                                                    </li>
+                                                                                                    <li><a href="#">Gadgets
+                                                                                                        &amp; Auto
+                                                                                                        Parts</a>
+                                                                                                    </li>
+                                                                                                    <li><a href="#">Headphones,
+                                                                                                        Headsets</a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="24.html"
+                                                                                                   onclick="window.location = '24.html';"
+                                                                                                   class="main-menu">Health
+                                                                                                    &amp; Beauty</a>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <a href="#">Home
+                                                                                                            Audio</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Helicopters
+                                                                                                            &amp;
+                                                                                                            Parts</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Outdoor
+                                                                                                            &amp;
+                                                                                                            Traveling</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Toys
+                                                                                                            &amp;
+                                                                                                            Hobbies</a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4 static-menu">
+                                                                                    <div class="menu">
+                                                                                        <ul>
+                                                                                            <li>
+                                                                                                <a href="#"
+                                                                                                   class="main-menu">Electronics</a>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <a href="#">Earings</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Salon
+                                                                                                            &amp;
+                                                                                                            Spa
+                                                                                                            Equipment</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Shaving
+                                                                                                            &amp;
+                                                                                                            Hair
+                                                                                                            Removal</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Smartphone
+                                                                                                            &amp;
+                                                                                                            Tablets</a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="#"
+                                                                                                   class="main-menu">Sports
+                                                                                                    &amp;
+                                                                                                    Outdoors</a>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <a href="#">Flashlights
+                                                                                                            &amp;
+                                                                                                            Lamps</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Fragrances</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Fishing</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">FPV
+                                                                                                            System
+                                                                                                            &amp;
+                                                                                                            Parts</a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4 static-menu">
+                                                                                    <div class="menu">
+                                                                                        <ul>
+                                                                                            <li>
+                                                                                                <a href="#"
+                                                                                                   class="main-menu">More
+                                                                                                    Car
+                                                                                                    Accessories</a>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <a href="#">Lighter
+                                                                                                            &amp;
+                                                                                                            Cigar
+                                                                                                            Supplies</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Mp3
+                                                                                                            Players
+                                                                                                            &amp;
+                                                                                                            Accessories</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Men
+                                                                                                            Watches</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Mobile
+                                                                                                            Accessories</a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="#"
+                                                                                                   class="main-menu">Gadgets
+                                                                                                    &amp; Auto
+                                                                                                    Parts</a>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <a href="#">Gift
+                                                                                                            &amp;
+                                                                                                            Lifestyle
+                                                                                                            Gadgets</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Gift
+                                                                                                            for
+                                                                                                            Man</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Gift
+                                                                                                            for
+                                                                                                            Woman</a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="#">Gift
+                                                                                                            for
+                                                                                                            Woman</a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="item-vertical css-menu with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+
+                                                                <strong>
+                                                                    <span>Moda &amp; Takı</span>
+                                                                    <b class="fa fa-angle-right"></b>
+                                                                </strong>
+                                                            </a>
+                                                            <div class="sub-menu" data-subwidth="30"
+                                                                 style="width: 270px; display: none; right: 0px;">
+                                                                <div class="content" style="display: none;">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            <div class="categories ">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-12 hover-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li><a href="#"
+                                                                                                       class="main-menu">Headphones,
+                                                                                                    Headsets <b
+                                                                                                            class="fa fa-angle-right"></b></a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Head
+                                                                                                                Magente</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Head
+                                                                                                                Unget</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Latenge
+                                                                                                                mange</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Car
+                                                                                                                Alarms
+                                                                                                                and
+                                                                                                                Security</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li><a href="#"
+                                                                                                       class="main-menu">Home
+                                                                                                    Audio</a></li>
+                                                                                                <li><a href="#"
+                                                                                                       class="main-menu">Health
+                                                                                                    &amp; Beauty<b
+                                                                                                            class="fa fa-angle-right"></b></a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Rengae
+                                                                                                                manges</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Mobiles</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Macs</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Punge
+                                                                                                                nenune</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li><a href="#"
+                                                                                                       class="main-menu">Helicopters
+                                                                                                    &amp; Parts</a>
+                                                                                                </li>
+                                                                                                <li><a href="#"
+                                                                                                       class="main-menu">Car
+                                                                                                    Audio &amp;
+                                                                                                    Speakers<b
+                                                                                                            class="fa fa-angle-right"></b></a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Qunge
+                                                                                                                genga</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Accessories</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Laptops
+                                                                                                                &amp;
+                                                                                                                Notebooks</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <strong>
+                                                                    <span>Aydınlatma &amp; Işık</span>
+                                                                </strong>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <strong>
+                                                                    <span>Kamera &amp; Fotoğraf</span>
+                                                                </strong>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <strong>
+                                                                    <span>Oyuncak &amp; Hobi</span>
+                                                                </strong>
+                                                            </a>
+                                                        </li>
+
+
+                                                        <li class="loadmore">
+                                                            <i class="fa fa-plus-square-o"></i>
+                                                            <span class="more-view">Daha Fazla</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Main menu -->
+                    <div class="header-bottom-right col-md-9 col-sm-10 col-xs-10">
+                        <div class="col-lg-9 col-md-8 col-sm-7 col-xs-9 header_search">
+                            <!-- Search -->
+                            <div id="sosearchpro" class="search-pro">
+                                <form method="GET"
+                                      action="https://demo.smartaddons.com/templates/html/maxshop/index.html">
+                                    <div id="search0" class="search input-group">
+                                        <div class="select_category filter_type  icon-select">
+                                            <select class="no-border" name="category_id">
+                                                <option value="0">Tümü</option>
+                                                <option value="20">Desktops</option>
+                                                <option value="26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home 9
+                                                </option>
+
+                                                <option value="27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home 8
+                                                </option>
+
+                                                <option value="18">Laptops &amp; Notebooks</option>
+                                                <option value="46">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Macs</option>
+
+                                                <option value="45">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows
+                                                </option>
+
+                                                <option value="25">Automotive</option>
+                                                <option value="35">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gadgets &amp;
+                                                    Auto Parts
+                                                </option>
+
+                                                <option value="36">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Car
+                                                    Accessories
+                                                </option>
+
+                                                <option value="29">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car Alarms
+                                                    and Security
+                                                </option>
+
+                                                <option value="28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car Audio
+                                                    &amp; Speakers
+                                                </option>
+
+                                                <option value="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Printers
+                                                </option>
+
+                                                <option value="31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanners
+                                                </option>
+
+                                                <option value="32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web Cameras
+                                                </option>
+                                                <option value="57">Mobile &amp; Tablet</option>
+                                                <option value="68">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hanet
+                                                    magente
+                                                </option>
+
+                                                <option value="69">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Knage unget
+                                                </option>
+
+                                                <option value="70">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Latenge
+                                                    mange
+                                                </option>
+
+                                                <option value="67">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Punge
+                                                    nenune
+                                                </option>
+
+                                                <option value="71">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qunge genga
+                                                </option>
+
+                                                <option value="65">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tange manue
+                                                </option>
+
+                                                <option value="17">Electronics</option>
+                                                <option value="64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Angene
+                                                    mafin
+                                                </option>
+
+                                                <option value="60">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Egante
+                                                    mangetes
+                                                </option>
+
+                                                <option value="62">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gante
+                                                    extensg
+                                                </option>
+
+                                                <option value="61">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Guntes
+                                                    magesg
+                                                </option>
+
+                                                <option value="66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rengae
+                                                    manges
+                                                </option>
+
+                                                <option value="63">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sine engain
+                                                </option>
+
+                                                <option value="33">Apparel</option>
+                                                <option value="76">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accessories
+                                                </option>
+
+                                                <option value="80">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bags</option>
+
+                                                <option value="74">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computers
+                                                </option>
+
+                                                <option value="72">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Electronics
+                                                </option>
+
+                                                <option value="79">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fashion
+                                                </option>
+
+                                                <option value="77">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Men</option>
+
+                                                <option value="73">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobiles
+                                                </option>
+
+                                                <option value="75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sports
+                                                </option>
+
+                                                <option value="81">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Watches
+                                                </option>
+
+                                                <option value="78">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Women
+                                                </option>
+
+                                                <option value="34">Computer</option>
+                                                <option value="43">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Camping &amp;
+                                                    Hiking
+                                                </option>
+
+                                                <option value="47">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cusen
+                                                    mariot
+                                                </option>
+
+                                                <option value="48">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denta
+                                                    magela
+                                                </option>
+
+                                                <option value="55">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Engite
+                                                    nanet
+                                                </option>
+
+                                                <option value="44">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Theid
+                                                    cupensg
+                                                </option>
+
+                                                <option value="59">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Verture
+                                                    agoent
+                                                </option>
+                                            </select>
+                                        </div>
+
+                                        <input class="autosearch-input form-control" type="text" value="" size="50"
+                                               autocomplete="off" placeholder="Ara..." name="search">
+                                        <span class="input-group-btn">
+											<button type="submit" class="button-search btn btn-primary"
+                                                    name="submit_search"><i class="fa fa-search"></i></button>
+											</span>
+                                    </div>
+                                    <input type="hidden" name="route" value="product/search"/>
+                                </form>
+                            </div>
+                            <!-- //end Search -->
+                        </div>
+
+                        <div class="block-cart">
+                            <!--cart-->
+                            <div class="shopping_cart pull-right">
+                                <div id="cart" class=" btn-group btn-shopping-cart">
+                                    <a data-loading-text="Loading..." class="btn-group top_cart dropdown-toggle"
+                                       data-toggle="dropdown">
+                                        <div class="shopcart">
+                                            <span class="handle pull-left"></span>
+                                            <span class="text-shopping-cart hidden-xs">	Sepetim	</span>
+                                            <span class="text-shopping-cart-mobi hidden-lg hidden-md hidden-sm ">
+												  <i class="fa fa-cart-plus"></i>
+												</span>
+                                        </div>
+                                    </a>
+                                    <ul class="tab-content content dropdown-menu pull-right shoppingcart-box"
+                                        role="menu">
+                                        <li>
+                                            <table class="table table-striped">
+                                                <tbody>
+                                                <tr>
+                                                    <td class="text-center" style="width:70px">
+                                                        <a href="product.html"> <img
+                                                                src="{% static 'image/demo/shop/product/35.jpg' %}"
+                                                                style="width:70px" alt="Filet Mign"
+                                                                title="Filet Mign" class="preview"> </a>
+                                                    </td>
+                                                    <td class="text-left"><a class="cart_product_name"
+                                                                             href="product.html">Filet Mign</a></td>
+                                                    <td class="text-center"> x1</td>
+                                                    <td class="text-center"> $1,202.00</td>
+                                                    <td class="text-right">
+                                                        <a href="product.html" class="fa fa-edit"></a>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a onclick="cart.remove('2');"
+                                                           class="fa fa-times fa-delete"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center" style="width:70px">
+                                                        <a href="product.html"> <img
+                                                                src="{% static 'image/demo/shop/product/141.jpg' %}"
+                                                                style="width:70px" alt="Canon EOS 5D"
+                                                                title="Canon EOS 5D" class="preview"> </a>
+                                                    </td>
+                                                    <td class="text-left"><a class="cart_product_name"
+                                                                             href="product.html">Canon EOS 5D</a>
+                                                    </td>
+                                                    <td class="text-center"> x1</td>
+                                                    <td class="text-center"> $60.00</td>
+                                                    <td class="text-right">
+                                                        <a href="product.html" class="fa fa-edit"></a>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a onclick="cart.remove('1');"
+                                                           class="fa fa-times fa-delete"></a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="text-left"><strong>Sub-Total</strong>
+                                                        </td>
+                                                        <td class="text-right">$1,060.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left"><strong>Eco Tax (-2.00)</strong>
+                                                        </td>
+                                                        <td class="text-right">$2.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left"><strong>VAT (20%)</strong>
+                                                        </td>
+                                                        <td class="text-right">$200.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left"><strong>Total</strong>
+                                                        </td>
+                                                        <td class="text-right">$1,262.00</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="text-center"><a class="btn view-cart" href="cart.html"><i
+                                                        class="fa fa-shopping-cart"></i>View Cart</a>&nbsp;&nbsp;&nbsp;
+                                                    <a class="btn btn-mega checkout-cart" href="checkout.html"><i
+                                                            class="fa fa-share"></i>Checkout</a></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--//cart-->
+                        </div>
+                        <div class="header_custom_link hidden-xs">
+                            <ul>
+                                <li><a href="{% url 'giris' %}"><i class="fa fa-user"></i> Giriş</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //end Main menu -->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>

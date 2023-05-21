@@ -1,0 +1,262 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<head>
+
+    <!-- Basic page needs
+	============================================ -->
+    <title>Musashop - Karşılaştır</title>
+    <meta charset="utf-8">
+    <meta name="keywords"
+          content="boostrap, responsive, html5, css3, jquery, theme, multicolor, parallax, retina, business"/>
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow"/>
+
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon
+    ============================================ -->
+
+    <link rel="shortcut icon" href="{% static 'ico/favicon.png' %}">
+
+    <!-- Google web fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:400,500,700,900' rel='stylesheet'
+          type='text/css'>
+
+    <!-- Libs CSS
+	============================================ -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/lib.css' %}" rel="stylesheet">
+    <link href="{% static 'js/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="{% static 'css/themecss/so_megamenu.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-categories.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-listing-tabs.css' %}" rel="stylesheet">
+
+    <link id="color_scheme" href="{% static 'css/theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body class="res layout-subpage">
+<div id="wrapper" class="wrapper-full ">
+    <!-- Header Container  -->
+    {% include 'partials/_header2.html' %}
+    <!-- //Header Container  -->
+    <!-- Main Container  -->
+    <div class="main-container container">
+        <ul class="breadcrumb">
+            <li><a href="{% url 'home' %}"><i class="fa fa-home"></i></a></li>
+            <li><a href="{% url 'karsilastir' %}">Ürün Karşılaştır</a></li>
+
+        </ul>
+
+        <div class="row">
+            <!--Middle Part Start-->
+            <div id="content" class="col-sm-12">
+                <h2 class="title">Ürün KArşılaştırma</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <td colspan="4"><strong>Ürün Detayları</strong></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Ürün</td>
+                            <td><a href="product.html">Laptop Gümüş Siyah</a></td>
+                            <td><a href="product.html">Dell E-14</a></td>
+                            <td><a href="product.html">Aspire Ultrabook Laptop</a></td>
+                        </tr>
+                        <tr>
+                            <td>Resim</td>
+                            <td class="text-center"><img class="img-thumbnail" title="Laptop Silver black"
+                                                         alt="Laptop Silver black" width="100px"
+                                                         src="{% static 'image/demo/shop/product/e4.jpg' %}"></td>
+                            <td class="text-center"><img class="img-thumbnail"
+                                                         title=" Strategies for Acquiring Your Own Laptop "
+                                                         alt=" Strategies for Acquiring Your Own Laptop " width="100px"
+                                                         src="{% static 'image/demo/shop/product/e3.jpg' %}"></td>
+                            <td class="text-center"><img class="img-thumbnail" title="Aspire Ultrabook Laptop"
+                                                         alt="Aspire Ultrabook Laptop" width="100px"
+                                                         src="{% static 'image/demo/shop/product/e3_3.jpg' %}"></td>
+                        </tr>
+                        <tr>
+                            <td>Fiyat</td>
+                            <td>
+                                <div class="price"><span class="price-new">$1,142.00</span> <span class="price-old">$1,202.00</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="price"><span class="price-new">$1,400.00</span> <span class="price-old">$1,900.00</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="price"><span class="price-new">$230.00</span> <span class="price-old">$241.99</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Model</td>
+                            <td>Ürün 17</td>
+                            <td>E-14</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Marka</td>
+                            <td>Apple</td>
+                            <td>Dell</td>
+                            <td>Apple</td>
+                        </tr>
+                        <tr>
+                            <td>Durum</td>
+                            <td>Stokta</td>
+                            <td>Stokta</td>
+                            <td>Gümrükte</td>
+                        </tr>
+                        <tr>
+                            <td>Rating</td>
+                            <td class="rating">
+                                <div class="rating-box">
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                </div>
+                                10 kez puanlandı.
+                            </td>
+                            <td class="rating">
+                                <div class="rating-box">
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                </div>
+                                24 kez puanlandı.
+                            </td>
+                            <td class="rating">
+                                <div class="rating-box">
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i
+                                            class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                </div>
+                                30 kez puanlandı.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Karşılaştırma</td>
+                            <td class="description">Bugüne kadar geliştirdiğimiz en popüler laptop olan MacBook Air,
+                                süper güçlerini M1 ve M2 çipten alıyor. Üstelik, FaceTime HD kamera, Touch ID ve göz
+                                alıcı ...
+                            </td>
+                            <td class="description"> Tamamen yenilenen Inspiron 5000 14 inç dizüstü bilgisayarı en
+                                sevdiğiniz ... %80'e kadar) ExpressCharge™ ile prize bağlı kalma zamanını en aza indirin
+                                ve
+                            </td>
+                            <td class="description">Macbook Air serisinde olduğu gibi Mac Pro serisi de SSD teknolojisi
+                                ile desteklenen bir depolama alanına sahiptir; bu da bilgisayarın oldukça hızlı bir
+                                şekilde ...
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ağırlık</td>
+                            <td>1.50kg</td>
+                            <td>1.80kg</td>
+                            <td>2.00kg</td>
+                        </tr>
+                        <tr>
+                            <td>Boyutlar (L x W x H)</td>
+                            <td>0.00mm x 0.00mm x 0.00mm</td>
+                            <td>0.00mm x 0.00mm x 0.00mm</td>
+                            <td>0.00cm x 0.00cm x 0.00cm</td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td><input type="button" onClick="" class="btn btn-primary btn-block" value="Sepete Ekle">
+                                <a class="btn btn-danger btn-block" href="#">Kaldır</a></td>
+                            <td><input type="button" onClick="" class="btn btn-primary btn-block" value="Sepete Ekle">
+                                <a class="btn btn-danger btn-block" href="#">Kaldır</a></td>
+                            <td><input type="button" onClick="" class="btn btn-primary btn-block" value="Sepete Ekle">
+                                <a class="btn btn-danger btn-block" href="#">Kaldır</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--Middle Part End -->
+
+        </div>
+    </div>
+    <!-- //Main Container -->
+    <!-- Footer Container -->
+    {% include 'partials/_footer.html' %}
+    <!-- //end Footer Container -->
+</div>
+
+
+<!-- Preloading Screen -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- End Preloading Screen -->
+
+<!-- Include Libs & Plugins
+	============================================ -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/libs.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/unveil/jquery.unveil.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/countdown/jquery.countdown.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/moment.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+
+
+<!-- Theme files
+============================================ -->
+
+
+<script type="text/javascript" src="{% static 'js/themejs/so_megamenu.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/addtocart.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/application.js' %}"></script>
+
+</body>
+
+</html>

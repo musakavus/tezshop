@@ -1,0 +1,286 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<head>
+
+    <!-- Basic page needs
+	============================================ -->
+    <title>Musashop - Sipariş Detayı</title>
+    <meta charset="utf-8">
+    <meta name="keywords"
+          content="boostrap, responsive, html5, css3, jquery, theme, multicolor, parallax, retina, business"/>
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow"/>
+
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon
+    ============================================ -->
+
+    <link rel="shortcut icon" href="{% static 'ico/favicon.png' %}">
+
+    <!-- Google web fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:400,500,700,900' rel='stylesheet'
+          type='text/css'>
+
+    <!-- Libs CSS
+	============================================ -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/lib.css' %}" rel="stylesheet">
+    <link href="{% static 'js/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="{% static 'css/themecss/so_megamenu.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-categories.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-listing-tabs.css' %}" rel="stylesheet">
+
+    <link id="color_scheme" href="{% static 'css/theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body class=" res layout-subpage">
+<div id="wrapper" class="wrapper-full ">
+    <!-- Header Container  -->
+    {% include 'partials/_header2.html' %}
+    <!-- //Header Container  -->
+    <!-- Main Container  -->
+    <div class="main-container container">
+        <ul class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i></a></li>
+            <li><a href="#">Sipariş Detayı</a></li>
+        </ul>
+
+        <div class="row">
+            <!--Middle Part Start-->
+            <div id="content" class="col-sm-9">
+                <h2 class="title">Sipariş Detayı</h2>
+
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <td colspan="2" class="text-left">Sipariş Bilgileri</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="width: 50%;" class="text-left"><b>Sipariş ID:</b> #214521
+                            <br>
+                            <b>Date Added:</b> 20/06/2023
+                        </td>
+                        <td style="width: 50%;" class="text-left"><b>Ödeme Yöntemi:</b> Kapıda ödeme
+                            <br>
+                            <b>Kargo Tipi:</b> Adrese Teslim
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <td style="width: 50%; vertical-align: top;" class="text-left">Sipariş Adresi</td>
+                        <td style="width: 50%; vertical-align: top;" class="text-left">Fatura Adresi</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-left">Musa
+                            <br>Araştırma Hastanesi
+                            <br>34 Pendik
+                            <br>İstanbul
+                            <br>Türkiye
+                        </td>
+                        <td class="text-left">Musa
+                            <br>Araştırma Hastanesi
+                            <br>34 Pendik
+                            <br>İstanbul
+                            <br>Türkiye
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <td class="text-left">Ürün İsmi</td>
+                            <td class="text-left">Model</td>
+                            <td class="text-right">Adet</td>
+                            <td class="text-right">Fİyat</td>
+                            <td class="text-right">Toplam</td>
+                            <td style="width: 20px;"></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-left">iPhone</td>
+                            <td class="text-left">13</td>
+                            <td class="text-right">1</td>
+                            <td class="text-right">$123.20</td>
+                            <td class="text-right">$123.20</td>
+                            <td style="white-space: nowrap;" class="text-right"><a class="btn btn-primary" title=""
+                                                                                   data-toggle="tooltip" href="#"
+                                                                                   data-original-title="Reorder"><i
+                                    class="fa fa-shopping-cart"></i></a>
+                                <a class="btn btn-danger" title="" data-toggle="tooltip" href="return.html"
+                                   data-original-title="Return"><i class="fa fa-reply"></i></a>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td class="text-right"><b>Ara Total</b>
+                            </td>
+                            <td class="text-right">$101.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td class="text-right"><b>Kargo Ücreti</b>
+                            </td>
+                            <td class="text-right">$5.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td class="text-right"><b>Kesintiler (-2.00)</b>
+                            </td>
+                            <td class="text-right">$6.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td class="text-right"><b>KDV (18%)</b>
+                            </td>
+                            <td class="text-right">$21.20</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td class="text-right"><b>Toplam</b>
+                            </td>
+                            <td class="text-right">$133.20</td>
+                            <td></td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <h3>Sipariş Geçmişi</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <td class="text-left">İşlem Tarihi</td>
+                        <td class="text-left">Durum</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-left">20/06/2023</td>
+                        <td class="text-left">Devam Ediyor</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">21/06/2023</td>
+                        <td class="text-left">Kargolandı</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">24/06/2023</td>
+                        <td class="text-left">Tamamlandı</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="buttons clearfix">
+                    <div class="pull-right"><a class="btn btn-primary" href="#">Devam</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <!--Middle Part End-->
+            <!--Right Part Start -->
+            <aside class="col-sm-3 hidden-xs" id="column-right">
+                <h2 class="subtitle">Hesap</h2>
+                <div class="list-group">
+                    <ul class="list-item">
+                        <li><a href="login.html">Giriş</a>
+                        </li>
+                        <li><a href="register.html">Kayıt</a>
+                        </li>
+                        <li><a href="#">Şifremi Unuttum</a>
+                        </li>
+                        <li><a href="#">Hesabım</a>
+                        </li>
+                        <li><a href="#">Adres</a>
+                        </li>
+                        <li><a href="wishlist.html">İstek Listesi</a>
+                        </li>
+                        <li><a href="#">Sİpariş Geçmişi</a>
+                        <li><a href="#">Ödüller</a>
+                        </li>
+                        <li><a href="#">İadeler</a>
+                        </li>
+                        <li><a href="#">İşlemler</a>
+                        </li>
+                        <li><a href="#">Abonelik</a>
+                        </li>
+                        <li><a href="#">Ödemeler</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!--Right Part End -->
+        </div>
+    </div>
+    <!-- //Main Container -->
+    <!-- Footer Container -->
+    {% include 'partials/_footer.html' %}
+    <!-- //end Footer Container -->
+</div>
+
+<!-- Preloading Screen -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- End Preloading Screen -->
+
+<!-- Include Libs & Plugins
+	============================================ -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/libs.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/unveil/jquery.unveil.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/countdown/jquery.countdown.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/moment.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+
+
+<!-- Theme files
+============================================ -->
+
+
+<script type="text/javascript" src="{% static 'js/themejs/so_megamenu.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/addtocart.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/application.js' %}"></script>
+
+
+</body>
+
+</html>

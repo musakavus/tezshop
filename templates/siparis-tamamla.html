@@ -1,0 +1,442 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/><!-- /Added by HTTrack -->
+<head>
+
+    <!-- Basic page needs
+	============================================ -->
+    <title>Maxshop - Premium Multipurpose HTML5/CSS3 Theme</title>
+    <meta charset="utf-8">
+    <meta name="keywords"
+          content="boostrap, responsive, html5, css3, jquery, theme, multicolor, parallax, retina, business"/>
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow"/>
+
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon
+    ============================================ -->
+
+    <link rel="shortcut icon" href="{% static 'ico/favicon.png' %}">
+
+    <!-- Google web fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:400,500,700,900' rel='stylesheet'
+          type='text/css'>
+
+    <!-- Libs CSS
+	============================================ -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/lib.css' %}" rel="stylesheet">
+    <link href="{% static 'js/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="{% static 'css/themecss/so_megamenu.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-categories.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-listing-tabs.css' %}" rel="stylesheet">
+
+    <link id="color_scheme" href="{% static 'css/theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body class="res layout-subpage">
+<div id="wrapper" class="wrapper-full ">
+    <!-- Header Container  -->
+    {% include 'partials/_header2.html' %}
+    <!-- //Header Container  -->
+    <!-- Main Container  -->
+    <div class="main-container container">
+        <ul class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i></a></li>
+            <li><a href="#">Sipariş Detayı</a></li>
+
+        </ul>
+
+        <div class="row">
+            <!--Middle Part Start-->
+            <div id="content" class="col-sm-12">
+                <h2 class="title">Checkout</h2>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><i class="fa fa-sign-in"></i> Hesap oluştur yada giriş yap</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" value="register" name="account">
+                                        Kullanıcı Girişi</label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" checked="checked" value="guest" name="account">
+                                        Misafir Girişi</label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" value="returning" name="account">
+                                        Yeni Kullanıcı</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><i class="fa fa-user"></i> Kişisel Bilgiler</h4>
+                            </div>
+                            <div class="panel-body">
+                                <fieldset id="account">
+                                    <div class="form-group required">
+                                        <label for="input-payment-firstname" class="control-label">İsminiz</label>
+                                        <input type="text" class="form-control" id="input-payment-firstname"
+                                               placeholder="İsminiz" value="" name="firstname">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-payment-lastname" class="control-label">Soyisminiz</label>
+                                        <input type="text" class="form-control" id="input-payment-lastname"
+                                               placeholder="Soyisminiz" value="" name="lastname">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-payment-email" class="control-label">E-Mail</label>
+                                        <input type="text" class="form-control" id="input-payment-email"
+                                               placeholder="E-Mail" value="" name="email">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-payment-telephone" class="control-label">Telefon</label>
+                                        <input type="text" class="form-control" id="input-payment-telephone"
+                                               placeholder="Telefon" value="" name="telephone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-payment-fax" class="control-label">Fax</label>
+                                        <input type="text" class="form-control" id="input-payment-fax" placeholder="Fax"
+                                               value="" name="fax">
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><i class="fa fa-book"></i> Adres Bilgileri</h4>
+                            </div>
+                            <div class="panel-body">
+                                <fieldset id="address" class="required">
+                                    <div class="form-group">
+                                        <label for="input-payment-company" class="control-label">Şirket</label>
+                                        <input type="text" class="form-control" id="input-payment-company"
+                                               placeholder="Şirket" value="" name="company">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-payment-address-1" class="control-label">Adres 1</label>
+                                        <input type="text" class="form-control" id="input-payment-address-1"
+                                               placeholder="Adres 1" value="" name="address_1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-payment-address-2" class="control-label">Adres 2</label>
+                                        <input type="text" class="form-control" id="input-payment-address-2"
+                                               placeholder="Addres 2" value="" name="address_2">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-payment-city" class="control-label">Şehir</label>
+                                        <input type="text" class="form-control" id="input-payment-city"
+                                               placeholder="Şehir" value="" name="city">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-payment-postcode" class="control-label">Posta Kodu</label>
+                                        <input type="text" class="form-control" id="input-payment-postcode"
+                                               placeholder="Posta Kodu" value="" name="postcode">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-payment-country" class="control-label">Ülke</label>
+                                        <select class="form-control" id="input-payment-country" name="country_id">
+                                            <option value=""> --- Lütfen seçin ---</option>
+                                            <option value="244">Aaland Islands</option>
+                                            <option value="1">Afghanistan</option>
+                                            <option value="2">Albania</option>
+                                            <option value="3">Algeria</option>
+                                            <option value="4">American Samoa</option>
+                                            <option value="5">Andorra</option>
+                                            <option value="6">Angola</option>
+                                            <option value="7">Anguilla</option>
+                                            <option value="8">Antarctica</option>
+                                            <option value="9">Antigua and Barbuda</option>
+                                            <option value="10">Argentina</option>
+                                            <option value="11">Armenia</option>
+                                            <option value="12">Aruba</option>
+                                            <option value="252">Ascension Island (British)</option>
+                                            <option value="13">Australia</option>
+                                            <option value="14">Austria</option>
+                                            <option value="15">Azerbaijan</option>
+                                            <option value="16">Bahamas</option>
+                                            <option value="17">Bahrain</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="input-payment-zone" class="control-label">Bölge</label>
+                                        <select class="form-control" id="input-payment-zone" name="zone_id">
+                                            <option value=""> --- Lütfen seçin ---</option>
+                                            <option value="3513">Aberdeen</option>
+                                            <option value="3514">Aberdeenshire</option>
+                                            <option value="3515">Anglesey</option>
+                                            <option value="3516">Angus</option>
+                                            <option value="3517">Argyll and Bute</option>
+                                            <option value="3518">Bedfordshire</option>
+                                            <option value="3519">Berkshire</option>
+                                            <option value="3520">Blaenau Gwent</option>
+                                            <option value="3521">Bridgend</option>
+                                            <option value="3522">Bristol</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" checked="checked" value="1" name="shipping_address">
+                                            Teslimat ve fatura adreslerim aynı olsun.</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><i class="fa fa-truck"></i> Kargo Tipi </h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>Kargo tipi bildriniz.</p>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" checked="checked" name="Free Shipping">
+                                                Ücretsiz Gönderim - $0.00</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="Flat Shipping Rate">
+                                                Sabit Nakliye Ücreti - $8.00</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="Per Item Shipping Rate">
+                                                Nekliye Ücreti - $150.00</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><i class="fa fa-credit-card"></i> Ödeme Yöntemi</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>Lütfen ödeme yöntemini belirtin.</p>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" checked="checked" name="Cash On Delivery">Nakit
+                                                Ödeme</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="Bank Transfer">Banka veya Havale</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="Paypal">Paypal</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><i class="fa fa-ticket"></i> Kupon Kodu Uygula</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <label for="input-coupon" class="col-sm-3 control-label">Kuponu Kodu Gir
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="input-coupon"
+                                                   placeholder="Kupon kodu gir" value="" name="coupon">
+                                            <span class="input-group-btn">
+								  <input type="button" class="btn btn-primary" data-loading-text="Loading..."
+                                         id="button-coupon" value="Kuponu Uygula">
+								  </span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><i class="fa fa-gift"></i> Hediye Çeki Kullan</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <label for="input-voucher" class="col-sm-3 control-label">Hediye çeki kodunu
+                                            gir</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="input-voucher"
+                                                   placeholder="Hediye çeki kodunu gir" value=""
+                                                   name="voucher">
+                                            <span class="input-group-btn">
+								  <input type="submit" class="btn btn-primary" data-loading-text="Loading..."
+                                         id="button-voucher" value="Çeki Uygula">
+								  </span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><i class="fa fa-shopping-cart"></i> Sepet </h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <td class="text-center">Resim</td>
+                                                    <td class="text-left">Ürün Adı</td>
+                                                    <td class="text-left">Adet</td>
+                                                    <td class="text-right">Birim Fiyat</td>
+                                                    <td class="text-right">Toplam</td>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="text-center"><a href="product.html"><img width="60px"
+                                                                                                        src="{% static 'image/demo/shop/product/e4.jpg' %}"
+                                                                                                        alt="Xitefun Causal Wear Fancy Shoes"
+                                                                                                        title="Xitefun Causal Wear Fancy Shoes"
+                                                                                                        class="img-thumbnail"></a>
+                                                    </td>
+                                                    <td class="text-left"><a href="product.html">Asus Tuf Gaming F15</a>
+                                                    </td>
+                                                    <td class="text-left">
+                                                        <div class="input-group btn-block" style="min-width: 100px;">
+                                                            <input type="text" name="quantity" value="1" size="1"
+                                                                   class="form-control">
+                                                            <span class="input-group-btn">
+											<button type="submit" data-toggle="tooltip" title="Update"
+                                                    class="btn btn-primary"><i class="fa fa-refresh"></i></button>
+											<button type="button" data-toggle="tooltip" title="Remove"
+                                                    class="btn btn-danger" onClick=""><i class="fa fa-times-circle"></i></button>
+											</span></div>
+                                                    </td>
+                                                    <td class="text-right">$902.00</td>
+                                                    <td class="text-right">$902.00</td>
+                                                </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                <tr>
+                                                    <td class="text-right" colspan="4"><strong>Ara Toplam:</strong></td>
+                                                    <td class="text-right">$750.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right" colspan="4"><strong>Kargo Fiyatı</strong>
+                                                    </td>
+                                                    <td class="text-right">$5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right" colspan="4"><strong>Eco Tax (-2.00):</strong>
+                                                    </td>
+                                                    <td class="text-right">$4.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right" colspan="4"><strong>KDV:</strong></td>
+                                                    <td class="text-right">$151.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right" colspan="4"><strong>Toplam:</strong></td>
+                                                    <td class="text-right">$910.00</td>
+                                                </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><i class="fa fa-pencil"></i> Siparişiniz Hakkında
+                                            Eklemek İstedikleriniz</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <textarea rows="4" class="form-control" id="confirm_comment"
+                                                  name="comments"></textarea>
+                                        <br>
+                                        <label class="control-label" for="confirm_agree">
+                                            <input type="checkbox" checked="checked" value="1" required=""
+                                                   class="validate required" id="confirm_agree" name="confirm agree">
+                                            <span>Şartlar ve Koşulları okudum ve kabul ediyorum</span>
+                                        </label>
+                                        <div class="buttons">
+                                            <div class="pull-right">
+                                                <input type="button" class="btn btn-primary" id="button-confirm"
+                                                       value="Siparişi Tamamla">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Middle Part End -->
+
+        </div>
+    </div>
+    <!-- //Main Container -->
+    <!-- Footer Container -->
+    {% include 'partials/_footer.html' %}
+    <!-- //end Footer Container -->
+</div>
+
+
+<!-- Preloading Screen -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- End Preloading Screen -->
+
+
+<!-- Include Libs & Plugins
+	============================================ -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/libs.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/unveil/jquery.unveil.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/countdown/jquery.countdown.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/moment.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+
+
+<!-- Theme files
+============================================ -->
+
+
+<script type="text/javascript" src="{% static 'js/themejs/so_megamenu.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/addtocart.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/application.js' %}"></script>
+
+</body>
+
+</html>

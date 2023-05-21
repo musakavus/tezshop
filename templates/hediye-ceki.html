@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<head>
+
+    <!-- Basic page needs
+	============================================ -->
+    <title>Musashop - Hediye Çeki</title>
+    <meta charset="utf-8">
+    <meta name="keywords"
+          content="boostrap, responsive, html5, css3, jquery, theme, multicolor, parallax, retina, business"/>
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow"/>
+
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon
+    ============================================ -->
+
+    <link rel="shortcut icon" href="{% static 'ico/favicon.png' %}">
+
+    <!-- Google web fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:400,500,700,900' rel='stylesheet'
+          type='text/css'>
+
+    <!-- Libs CSS
+	============================================ -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/lib.css' %}" rel="stylesheet">
+    <link href="{% static 'js/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="{% static 'css/themecss/so_megamenu.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-categories.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themecss/so-listing-tabs.css' %}" rel="stylesheet">
+
+    <link id="color_scheme" href="{% static 'css/theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body class="res layout-subpage">
+<div id="wrapper" class="wrapper-full ">
+    <!-- Header Container  -->
+    {% include 'partials/_header2.html' %}
+    <!-- //Header Container  -->
+    <!-- Main Container  -->
+    <div class="main-container container">
+        <ul class="breadcrumb">
+            <li><a href="{% url 'home' %}"><i class="fa fa-home"></i></a></li>
+            <li><a href="{% url 'hediye_ceki' %}">Hediye Çeki</a></li>
+        </ul>
+
+        <div class="row">
+            <!--Middle Part Start-->
+            <div id="content" class="col-sm-9">
+                <h2 class="title">Hediye Çeki Al</h2>
+                <p>Bu hediye kartı, siparişinizin ödemesi yapıldıktan sonra alıcıya e-posta ile gönderilecektir.</p>
+
+                <form class="form-horizontal">
+                    <div class="form-group required">
+                        <label for="input-to-name" class="col-sm-2 control-label">Alıcı Adı</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input-to-name" value="" name="to_name">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-to-email" class="col-sm-2 control-label">Alıcı Mail Adresi</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input-to-email" value="" name="to_email">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-from-name" class="col-sm-2 control-label">Adınız</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input-from-name" value="" name="from_name">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-from-email" class="col-sm-2 control-label">E-mail Adresiniz</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input-from-email" value="" name="from_email">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label">Hediye Çeki Teması</label>
+                        <div class="col-sm-10">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" value="8" name="voucher_theme_id"> Genel
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" value="7" name="voucher_theme_id"> Doğum Günü
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" value="6" name="voucher_theme_id"> Yılbaşı
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-message" class="col-sm-2 control-label"><span title="" data-toggle="tooltip"
+                                                                                        data-original-title="Optional">Mesajınız</span>
+                        </label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="input-message" rows="5" cols="40"
+                                      name="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-amount" class="col-sm-2 control-label"><span title="" data-toggle="tooltip"
+                                                                                       data-original-title="Card value can range from between $10.00 and $1,000.00">Adet</span>
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" size="5" class="form-control" id="input-amount" value="10" name="amount">
+                        </div>
+                    </div>
+                    <div class="buttons clearfix">
+                        <div class="pull-right">Hediye sertifikalarının iade edilemez olduğunu kabul ediyorum.
+                            <input type="checkbox" value="1" name="agree"> &nbsp;
+                            <input type="submit" class="btn btn-primary" value="Continue">
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+            <!--Middle Part End-->
+            <!--Right Part Start -->
+            <aside class="col-sm-3 hidden-xs" id="column-right">
+                <h2 class="subtitle">Hesap</h2>
+                <div class="list-group">
+                    <ul class="list-item">
+                        <li><a href="login.html">Giriş</a>
+                        </li>
+                        <li><a href="register.html">Kayıt</a>
+                        </li>
+                        <li><a href="#">Şifremi Unuttum</a>
+                        </li>
+                        <li><a href="#">Hesabım</a>
+                        </li>
+                        <li><a href="#">Adreslerim</a>
+                        </li>
+                        <li><a href="wishlist.html">İstek Listesi</a>
+                        </li>
+                        <li><a href="#">Sipariş Geçmişim</a>
+                        </li>
+                        <li><a href="#">İndirmeler</a>
+                        </li>
+                        <li><a href="#">Ödüller</a>
+                        </li>
+                        <li><a href="#">İadeler</a>
+                        </li>
+                        <li><a href="#">İşlemler</a>
+                        </li>
+                        <li><a href="#">Abonelik</a>
+                        </li>
+                        <li><a href="#">Ödeme Yöntemleri</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!--Right Part End -->
+        </div>
+    </div>
+    <!-- //Main Container -->
+    <!-- Footer Container -->
+    {% include 'partials/_footer.html' %}
+    <!-- //end Footer Container -->
+
+</div>
+
+
+<!-- Preloading Screen -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- End Preloading Screen -->
+
+<!-- Include Libs & Plugins
+	============================================ -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/libs.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/unveil/jquery.unveil.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/countdown/jquery.countdown.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/moment.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datetimepicker/bootstrap-datetimepicker.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+
+
+<!-- Theme files
+============================================ -->
+
+
+<script type="text/javascript" src="{% static 'js/themejs/so_megamenu.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/addtocart.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/themejs/application.js' %}"></script>
+</body>
+
+</html>
